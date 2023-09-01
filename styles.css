@@ -11,7 +11,7 @@ Variables
 */
 
 :root {
-  /* grey used for paragraphs */
+  --purple: #5a2049;
   --white: #fff;
   --black: #222;
   --ff-primary: "Playfair Display", serif;
@@ -29,9 +29,6 @@ Variables
 Global Styles
 ===============
 */
-.title{
-  color: ;
-}
 *,
 ::after,
 ::before {
@@ -42,6 +39,7 @@ Global Styles
 body {
   line-height: 1.5;
   font-size: 0.875rem;
+  background-color: var(--purple);
 }
 ul {
   list-style-type: none;
@@ -132,7 +130,7 @@ Nav
 ===============
 */
 nav {
-  background: var(--clr-white);
+  background-color: var(--purple);
   height: 3rem;
   display: grid;
   align-items: center;

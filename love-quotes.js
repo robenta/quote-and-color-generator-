@@ -22,6 +22,7 @@ const loveQuotes = ['To love and be loved is to feel the sun from both sides.   
 'Unable to perceive the shape of you, I find you all around me. Your presence fills my eyes with your love. It humbles my heart. For you are everywhere.                                      - HAKIM SANAI', 'My heart is and always will be yours.                                      - JANE AUSTEN', 'Have enough courage to trust love one more time and always one more time.                                      - MAYA ANGELOU', 'The supreme happiness of life consists in the conviction that one is loved.                                      - VICTOR HUGO', 'Love is so short, forgetting is so long.                                      - PABLO NERUDA', 'Love is like the wind, you can\'t see it. But you can feel it.                                      - NICHOLAS SPARKS', 'True love bears all, endures all, and triumphs!                                      - DADA VASWANI', 'Life is hard. Love shouldn\'t be hard too.                                      - ROBENTA']
 const btn = document.getElementById('btn')
 const color = document.querySelector('.color')
+const nav = document.querySelector('.nav')
 
 
 btn.addEventListener('click', function(){
@@ -37,6 +38,7 @@ btn.addEventListener('click', function(){
     }
     color.textContent = hexColor
     document.body.style.backgroundColor = hexColor
+    nav.style.backgroundColor = hexColor
 })
 
 function getRandomNumber(){

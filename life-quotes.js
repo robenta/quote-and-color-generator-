@@ -4,6 +4,7 @@ const lifeQuotes = ['With great power comes great responsibility', 'Life without
 'Great things never come from comfort zones.', 'See the good in yourself and in others.', 'Success comes from knowing that you did your best to become the best that you are capable of becoming.', 'When we allow ourselves to fail, we also give ourselves permission to succeed.']
 const btn = document.getElementById('btn')
 const color = document.querySelector('.color')
+const nav = document.querySelector('.nav')
 
 
 btn.addEventListener('click', function(){
@@ -19,6 +20,7 @@ btn.addEventListener('click', function(){
     }
     color.textContent = hexColor
     document.body.style.backgroundColor = hexColor
+    nav.style.backgroundColor = hexColor
 })
 
 function getRandomNumber(){
