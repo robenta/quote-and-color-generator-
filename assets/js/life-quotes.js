@@ -6,6 +6,11 @@ const btn = document.getElementById('btn')
 const color = document.querySelector('.color')
 const nav = document.querySelector('.nav')
 
+window.addEventListener('DOMContentLoaded', function(){
+    let defaultValue = 'Sometimes, later becomes never. Do it now.';
+    document.querySelector('#quotes').textContent = defaultValue
+
+})
 
 btn.addEventListener('click', function(){
     let quotes = '';
