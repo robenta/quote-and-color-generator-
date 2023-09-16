@@ -1,3 +1,4 @@
+// GET UI
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 const lifeQuotes = ['With great power comes great responsibility', 'Life without dreams is like a bird with a broken wing - it can\'t fly', 'Success is not final, failure is not fatal - it is the courage to continue what counts.', 
 'Sometimes, later becomes never. Do it now.', 'The best way to get something done is to begin.', 'Life can only be understood backwards; but it must be lived forwards.', 'Great things take time.', 'As long as you believe, it is possible.',
@@ -6,19 +7,32 @@ const btn = document.getElementById('btn')
 const color = document.querySelector('.color')
 const nav = document.querySelector('.nav')
 
+// TO SHOW A DEFAULT QUOTE ON WINDOW LOAD
 window.addEventListener('DOMContentLoaded', function(){
     let defaultValue = 'Sometimes, later becomes never. Do it now.';
     document.querySelector('#quotes').textContent = defaultValue
 
 })
+// TO GENERATE RANDOM HEX CODES FROM GIVEN VALUES IN UI
+function getRandomNumber(){
+    return Math.floor(Math.random() * hex.length)
+}
 
+// TO GENERATE RANDOM QUOTES FROM GIVEN VALUES IN UI
+function getRandomQuote(){
+    return Math.floor(Math.random() * lifeQuotes.length)
+}
+
+// TO GET RANDOM QUOTES AND COLORS
 btn.addEventListener('click', function(){
+    // to generate random quotes
     let quotes = '';
     for(let i=0; i<13; i++){
         quotes = lifeQuotes[getRandomQuote()]
     }
     document.querySelector('#quotes').textContent = quotes
 
+    // to generate random colors
     let hexColor = '#';
     for(let i=0; i<6; i++){
         hexColor += hex[getRandomNumber()]
@@ -28,10 +42,3 @@ btn.addEventListener('click', function(){
     nav.style.backgroundColor = hexColor
 })
 
-function getRandomNumber(){
-    return Math.floor(Math.random() * hex.length)
-}
-
-function getRandomQuote(){
-    return Math.floor(Math.random() * lifeQuotes.length)
-}
